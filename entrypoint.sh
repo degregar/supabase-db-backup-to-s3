@@ -4,9 +4,8 @@ set -euo pipefail
 
 DATABASE_URL="${DATABASE_URL}"
 
-TIMESTAMP="$(date +%s)"
-
-DUMP_FILE="db-dump-${TIMESTAMP}.sql.gz"
+CURRENT_DATE=$(date +"%Y%m%d%H%M")
+DUMP_FILE="db-dump-${CURRENT_DATE}.sql.gz"
 
 echo "Creating dump at ${DUMP_FILE}"
 
